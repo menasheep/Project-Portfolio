@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "CodingDojo Wall";
+}
+<body>
+    <nav>
+        <h1>CodingDojo Wall</h1>
+        <p>
+            Welcome, @ViewBag.CurrUser.FirstName @ViewBag.CurrUser.LastName
+        </p>
+        <a href="/logout">Log Out</a>
+    </nav>
+
+
+    <main> <!--message box-->
+    <fieldset>
+        <legend>Post a message!</legend>
+        <form id="message" action="view-message" method="post">
+            <textarea name="Content" rows="4" cols="50" placeholder="Enter your message here"></textarea><br><br>
+            <button type="submit" name="submit" value="submit">Submit</button>
+        </form>
+    </fieldset>
+
+
+<!--message board-->
+<ul
+
+@{
+    foreach(var Message in ViewBag.AllMsgs)
+    {   
+        <p>
+            @Message.User.FirstName @Message.User.LastName
+            
+            @Message.Content
+        </p>
+    }
+}
+    </main>
+</body>
+
+

@@ -1,0 +1,23 @@
+*{
+    background-image: url("../images/Firewatch.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+nav{
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+form { 
+    display: block;
+    margin-top: 0em;
+}
