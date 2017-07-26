@@ -1,2 +1,2 @@
 # Project-Portfolio
-Completed projects for your viewing pleasure
+Completed portfolio projects for your viewing pleasure
