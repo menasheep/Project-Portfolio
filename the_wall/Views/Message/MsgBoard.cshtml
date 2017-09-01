@@ -1,39 +1,48 @@
 @{
-    ViewData["Title"] = "CodingDojo Wall";
+    ViewData["Title"] = "Message Board";
 }
 <body>
     <nav>
-        <h1>CodingDojo Wall</h1>
-        <p>
-            Welcome, @ViewBag.CurrUser.FirstName @ViewBag.CurrUser.LastName
+        <h1>The Wall</h1>
+        <p id="user-info">
+            Welcome, @ViewBag.CurrUser.FirstName @ViewBag.CurrUser.LastName!<br><a href="/logout">Log Out</a>
         </p>
-        <a href="/logout">Log Out</a>
     </nav>
 
+    <main>
+        <div class="msg-box" style="overflow-x:auto;">
+            <table style="width:100%">
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                <tr>
+                <!--message board-->  
+                    <td>
+                        <ul
+                        @{
+                            foreach(var Message in ViewBag.AllMsgs)
+                            {   
+                                <p>
+                                    Posted by: @Message.User.FirstName @Message.User.LastName on @Message.CreatedAt
+                                    <br>
+                                    @Message.Content
+                                </p><br>
+                            }
+                        }
+                    </td>
 
-    <main> <!--message box-->
-    <fieldset>
-        <legend>Post a message!</legend>
-        <form id="message" action="view-message" method="post">
-            <textarea name="Content" rows="4" cols="50" placeholder="Enter your message here"></textarea><br><br>
-            <button type="submit" name="submit" value="submit">Submit</button>
-        </form>
-    </fieldset>
-
-
-<!--message board-->
-<ul
-
-@{
-    foreach(var Message in ViewBag.AllMsgs)
-    {   
-        <p>
-            @Message.User.FirstName @Message.User.LastName
-            
-            @Message.Content
-        </p>
-    }
-}
+                    <td id="post">
+                        <fieldset> <!--message box-->
+                            <legend>What's on your mind today?</legend>
+                            <form id="message" action="view-message" method="post">
+                                <textarea name="Content" rows="5" cols="50" autofocus wrap="soft" maxlength="1000" placeholder="Enter your message here"></textarea><br><br>
+                                <button type="submit" name="submit" value="submit">Submit</button>
+                            </form>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </main>
 </body>
 

@@ -15,40 +15,69 @@
             }
         }
     </div>
-    <main>
-        <fieldset>
-            <legend><strong>Register</strong></legend>
 
-        <form class="NewUser" action="register" method="post">
-            <strong>
-                First Name:
-                <input type="text" name="FirstName"><br>
-                Last Name:
-                <input type="text" name="LastName"><br>
-                Email:
-                <input type="text" name="Email" placeholder="ninja@codingdojo.com"><br>
-                Password:
-                <input type="password" name="Password" placeholder=" * * * * * * "><br>
-                Password Confirmation:
-                <input type="password" name="PasswordConfirmation" placeholder=" * * * * * * "><br><br>
+    <nav>
+        <h1>The Wall</h1>
+        <p id="user-info">
+            Welcome, Guest!
+        </p>
+    </nav> 
 
-            <button type="submit" name="register" value="Register">Register</button>
-            </strong>
-        </fieldset>
-        </form>  
-
-        <br><br><br>
+    <main class="login-reg">
+        <div id="reg" style="overflow-x:auto;">
+            <fieldset>
+                <legend><h3>Register</h3></legend>
+                <form action="register" method="post">
+                    <table style="width:100%">
+                        <colgroup>
+                            <col span="2">
+                        </colgroup>
+                        <tr>
+                            <td>First Name:</td>
+                            <td><input type="text" name="FirstName"></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td><input type="text" name="LastName"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="text" name="Email"<placeholder="ninja@codingdojo.com"></td>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="Password" placeholder=" * * * * * * "></td>
+                        </tr>
+                        <tr>
+                            <td>Password Confirmation:</td>
+                            <td><input type="password" name="PasswordConfirmation" placeholder=" * * * * * * "></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="submit" name="register" value="Register">Register</button>
+                </form>  
+            </fieldset>
+        </div>
         
-        <fieldset>
-            <strong><legend>Login</legend></strong>
-            <strong>
-            <form class="ReturningUser" action="login" method="post">
-                Email:
-                <input type="text" name="Email" placeholder="ninja@codingdojo.com"><br>
-                Password:
-                <input type="password" name="Password" placeholder=" * * * * * * "><br><br>
-                <button type="submit" name="login" value="Login">Login</button>
-                </strong>
-            </form>  
-        </fieldset>
+        <div id="log" style="overflow-x:auto;">
+            <fieldset>
+                <legend><h3>Login</h3></legend>
+                <form action="login" method="post">
+                        <table style="width:100%">
+                                <colgroup>
+                                    <col span="2">
+                                </colgroup>
+                                <tr>
+                                    <td>Email:</td>
+                                    <td><input type="text" name="Email" placeholder=" ninja@codingdojo.com"></td>
+                                </tr>
+                                <tr>
+                                    <td>Password:</td>
+                                    <td><input type="password" name="Password" placeholder=" * * * * * * "></td>
+                                </tr>
+                            </table>
+                            <br>
+                            <button type="submit" name="login" value="Login">Login</button>
+                </form>  
+            </fieldset>
+        </div>
     </main>
