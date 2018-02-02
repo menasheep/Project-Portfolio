@@ -1,0 +1,14 @@
+body {
+    background-color: #000;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 800px;
+    background-color: whitesmoke;
+    }
+
+#flip-clock {
+    display: block;
+}
