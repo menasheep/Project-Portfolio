@@ -1,3 +1,6 @@
+::Algorithm example for a previous job application::
+
+
 // Sum of all multiples of 3 or 5 less than 1000 (JavaScript)
 
 //initially sets "sum" to 0
