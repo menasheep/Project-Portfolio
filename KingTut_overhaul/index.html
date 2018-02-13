@@ -9,8 +9,8 @@
 
         <link rel="manifest" href="site.webmanifest">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" media="all" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script type="text/javascript" src="js/jquery.plugins.js"></script>
     </head>
@@ -20,27 +20,59 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        
+        <div id="topbar">
+            <a href="#">Home</a>
+        </div>
+
         <div id="wrapper">
-            <div id="content">
-                <nav id="stickynav">
-                    <img src="C:\Users\frump\Desktop\Projects\KingTut_overhaul\img\logo\logo.png" id="logo">
-                    
+            <main>
+                <img src="C:\Users\frump\Desktop\Projects\KingTut_overhaul\img\logo\logo.png" id="logo">
+
+                <nav id="stickynav">                    
                     <ul id="nav" class="clearfix">
                         <li><a href="#topbar">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#menu">Menu</a></li>
                         <li><a href="#contact">Find Us</a></li>
-                        <li><a href="#order">Order Online</a></li>
                     </ul>
+
                 </nav>
-                <div id="main">
+                <h1>Single-Page Sliding Effect</h1>
+
+                <p>Click on the navigation items for a basic sliding effect.</p>
+                <br><br>
+                
+                <section id="about" class="section">
+                    <h2>About Us</h2>
+                    
+                        <p>Uh, I'm quite sure you'll be very pleased with that one, sir. He really is in first-class condition. I've worked with him before. Here he comes. Okay, let's go. Now, don't you forget this! Why I should stick my neck out for you is quite beyond my capacity! Thank the maker! This oil bath is going to feel so good. I've got such a bad case of dust contamination, I can barely move! It just isn't fair. Oh, Biggs is right. I'm never gonna get out of here! Is there anything I might do to help? Well, not unless you can alter time, speed up the harvest, or teleport me off this rock! I don't think so, sir. I'm only a droid and not very knowledgeable about such things. Not on this planet, anyways. As a matter of fact, I'm not even sure which planet I'm on.</p>
+                </section>
+                <br><br>
+
+                <section id="gallery" class="section">
+                    <h2>Gallery</h2>
                     <img src="C:\Users\frump\Desktop\Projects\KingTut_overhaul\img\artichoke-2237845_1920.jpg" id="artichokes">
-                </div>
-                <div id="about">
-    
-                </div>
-            </div>
+                    
+                    <p>What? Yahoo! Look out! You're all clear, kid. Now let's blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.</p>
+                    
+                    <p>And, now Your Highness, we will discuss the location of your hidden Rebel base.</p>
+                </section>
+                <br><br>
+
+                <section id="menu" class="section">
+                    <h2>Menu</h2>
+                    <p>Jabba's through with you. He has no time for smugglers who drop their shipments at the first sign of an Imperial cruiser. Even I get boarded sometimes. Do you think I had a choice? You can tell that to Jabba. He may only take your ship. Over my dead body. That's the idea. I've been looking forward to killing you for a long time. Yes, I'll bet you have. Sorry about the mess.</p>
+                    
+                </section>
+                <br><br>
+                
+                <section id="contact" class="section">
+                    <h2>Find Us</h2>
+                    <p> We count thirty Rebel ships, Lord Vader. But they're so small they're evading our turbo-lasers! We'll have to destroy them ship to ship. Get the crews to their fighters. Luke, let me know when you're going in. I'm on my way in now... Watch yourself! There's a lot of fire coming from the right side of that deflection tower. I'm on it. Squad leaders, we've picked up a new group of signals. Enemy fighters coming your way.</p>
+                    
+                </section>
+            </main>
         </div>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -49,11 +81,13 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+            $(function(){
+                $("#nav a").click(function(e){
+                    e.preventDefault();
+                    $('html,body').scrollTo(this.hash,this.hash); 
+                });
+            });
+        </script>        
     </body>
 </html>
