@@ -121,11 +121,6 @@ textarea {
     background: #fff;
 } */
 
-#artichokes {
-    width: 100%;
-}
-
-
 #topbar {
     /* float: right; */
     background: #4f4a41;
@@ -217,7 +212,32 @@ form .basictxt {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
+#gallery {
+    background-color: black;
+}
 
+#slideshow {
+    width:450px;
+}
+
+#lighteslider {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+
+#lightslider li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+}
+
+#lighslider img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
 
 
 
