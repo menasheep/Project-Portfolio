@@ -212,6 +212,9 @@ form .basictxt {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
+
+/* gallery styling */
+
 #gallery {
     background-color: black;
 }
@@ -238,7 +241,6 @@ form .basictxt {
     height: auto;
     max-width: 100%;
 }
-
 
 
 
@@ -300,6 +302,7 @@ form .basictxt {
 .invisible {
     visibility: hidden;
 }
+/* nav bar */
 
 /* Clearfix: contain floats
  *
