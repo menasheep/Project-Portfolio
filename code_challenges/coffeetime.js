@@ -24,30 +24,31 @@
 // STEP 1: BREADTH-FIRST SEARCH TO DETERMINE COORDINATES OF EACH TYPE OF OBSTACLE
 
 // Procedure for the breadth-first search:
-// Pull the first location off of the queue
-// Loop through the locations that are 1 "move" away from the location you just pulled off the queue (in this example, the tiles to the North, South, East, and West of the current tile)
-// If one of these locations is the goal, we're done!
-// Otherwise, if and only if the location has not yet been visited and is valid (ie. is on the board and is not an "obstacle"), add that new location to the end of the queue.
-// Repeat the process...(pull the first location off of the queue, etc.)
+    // Pull the first location off of the queue
+    // Loop through the locations that are 1 "move" away from the location you just pulled off the queue (in this example, the tiles to the 
+    // North, South, East, and West of the current tile)
+    // If one of these locations is coffee, we're done!
+    // Otherwise, if and only if the location has not yet been visited and is valid (ie. is on the board and is not a wall), add that new location to the end of the queue.
+    // Repeat the process...(pull the first location off of the queue, etc.)
 
 
 // Pathfinding function
 
-// Start location will be in the following format:
-// [distanceFromTop, distanceFromLeft]
 var queue;
 var steps;
 
 // Array to store coordinates for each wall
 var WallLocations = [];
 
+// Start location will be in the following format:
+// [distanceFromTop, distanceFromLeft]
 
 var findShortestPath = function(startCoordinates, office) {
+    // This is where the function will look first since starting point is (0,0) and this is a breadth-first function
     var distanceFromTop = startCoordinates[0];
-    var distanceFromLeft = startCoordinates[1];
+    var distanceFromLeft = startCoordinates[1]; 
     var position = (distanceFromTop,distanceFromLeft); // position on the office grid
     
-    // Location object: 
     //Each "location" will store its coordinates and the shortest path required to arrive there
     var location = {
         distanceFromTop: distanceFromTop,
@@ -56,7 +57,7 @@ var findShortestPath = function(startCoordinates, office) {
         position: [],
         status: 'Start'
     };
-    
+
 
     // Initialize the queue with the start location already inside
     var queue = [location];
@@ -83,6 +84,7 @@ var findShortestPath = function(startCoordinates, office) {
     WallLocations.push(position);
     return false;
 };
+
 
 // This function will check a location's status (a location is "valid" if it is on the grid, is not a wall,
 // and has not yet been visited by our algorithm).
@@ -113,7 +115,7 @@ var locationStatus = function(location, office) {
     }
 };
 
-// Explores the grid from the given location in the given direction
+// This function explores the grid from the given location in the given direction
 var exploreInDirection = function(currentLocation, direction, office) {
     var newPath = currentLocation.path.slice();
     newPath.push(direction);
@@ -144,7 +146,7 @@ var exploreInDirection = function(currentLocation, direction, office) {
         office[newLocation.distanceFromTop][newLocation.distanceFromLeft] = 'Visited';
     }
     
-    steps = newLocation.path.length;
+    steps = newLocation.path.length; // This counts the steps to coffee!
     return newLocation;
 };
 
@@ -155,34 +157,35 @@ var exploreInDirection = function(currentLocation, direction, office) {
 // STEP 2: CONSTRUCT A GRID
 // Grid constructor function //
 
-var gridSize = 4; // Create a 4x4 office grid
+var gridSize = 4; // Create a 4x4 office grid (grid size and # of obstacles can change)
 var office = []; // Store the coordinates in an array
 
-for (var i=0; i<gridSize; i++) {  // Iterate through the array — any blank space is labeled as a "Desk"
+for (var i=0; i<gridSize; i++) {  // Iterate through the array — any blank space is labeled as a "Desk", since employees can move through them
     office[i] = [];
     for (var j=0; j<gridSize; j++) {
         office[i][j] = "Desk";
     }
 }
 
-// Fill the grid with a start point, a goal (coffee), and obstacles (walls) -- ((first index is "distance from top row", second index is "distance from left-most column"))
+// Next, fill the grid with a start point, a goal (coffee), and obstacles (walls) -- ((first index is "distance from top row", second index is "distance from left-most column"))
 office[0][0] = "Start";
 office[2][2] = "Coffee";
 
 office[1][1] = "Wall";
 office[1][2] = "Wall";
-office[1][3] = "Wall";
+office[2][1] = "Wall";
 office[3][1] = "Wall";
 
-// console.log(office);
 
 // Visual representation
 
 //  |S|-|-|-|
-//  |-|W|W|W|
-//  |-|-|C|-|
+//  |-|W|W|-|
+//  |-|W|C|-|
 //  |-|W|-|-|
 
 
-console.log(findShortestPath([0,0], office));
+// Next, we call our functions!
+
+console.log("Directions: " + findShortestPath([0,0], office));
 console.log("Coffee is " + steps + " steps from the starting point!");
