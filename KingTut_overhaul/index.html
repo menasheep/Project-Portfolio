@@ -10,10 +10,30 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/main.css">                
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/plugins.js"></script>
-        <script type="text/javascript" src="js/lightslider.js"></script>
         
+        <script> //lightslider
+            $(document).ready(function() {
+                $("#content-slider").lightSlider({
+                    loop:true,
+                    keyPress:true
+                });
+                $('#image-gallery').lightSlider({
+                    gallery:true,
+                    item:1,
+                    thumbItem:9,
+                    slideMargin: 0,
+                    speed:500,
+                    auto:true,
+                    loop:true,
+                    onSliderLoad: function() {
+                        $('#image-gallery').removeClass('cS-hidden');
+                    }  
+                });
+            });
+        </script>
+
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -21,24 +41,20 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="topbar">
-            <a href="#">Home</a>
-        </div>
+        <nav id="topbar">
+            <ul class="clearfix">
+                    <li><a href="#topbar">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Find Us</a></li>
+                </ul>
+        </nav>
 
         <div id="wrapper">
             <main>
                 <img src="img\logo\logo.png" id="logo">
 
-                <nav id="stickynav">                    
-                    <ul id="nav" class="clearfix">
-                        <li><a href="#topbar">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#contact">Find Us</a></li>
-                    </ul>
-
-                </nav>
                 <h1>Single-Page Sliding Effect</h1>
 
                 <p>Click on the navigation items for a basic sliding effect.</p>
@@ -54,47 +70,62 @@
                 <section id="gallery" class="section">
                     <h2>Gallery</h2>
 
-                    <div id="slideshow">
-                        <ul id="lightSlider">
-                            <li>
-                                <li data-thumb="img/artichokes.jpg">
-                                    <img src="img/artichokes.jpg"/>
-                            </li>
-                            <li>
-                                <li data-thumb="img/eggplant.jpg">
-                                    <img src="img/eggplant.jpg"/>
-                            </li>
-                        </ul>
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                                $('#lightSlider').lightSlider({
-                                    gallery: true,
-                                    item: 2,
-                                    loop: true,
-                                    slideMargin: 0,
-                                    thumbItem: 9
-                                });
-                            });
-
-                            $(document).ready(function() {
-                                var slider = $("#lightSlider").lightSlider();
-                                slider.goToSlide(3);
-                                slider.goToPrevSlide();
-                                slider.goToNextSlide();
-                                slider.getCurrentSlideCount();
-                                slider.refresh();
-                                slider.play(); 
-                                slider.pause();    
-                            });
-
-                        </script>
-                    </div>
-
-                    
-                    <p>What? Yahoo! Look out! You're all clear, kid. Now let's blow this thing and go home! Stand by to fire at Rebel base. Standing by. Great shot, kid. That was one in a million. Remember, the Force will be with you...always.</p>
-                    
-                    <p>And, now Your Highness, we will discuss the location of your hidden Rebel base.</p>
+                    <div class="demo">
+                        <div class="item">            
+                            <div class="clearfix" style="max-width:474px;">
+                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                                    <li data-thumb="img/artichokes.jpg"> 
+                                        <img src="img/artichokes.jpg" />
+                                    </li>
+                                    <li data-thumb="img/eggplant.jpg"> 
+                                        <img src="img/eggplant.jpg" />
+                                    </li>
+                                    <li data-thumb="img/greek_platters.jpg"> 
+                                        <img src="img/greek_platters.jpg" />
+                                    </li>
+                                    <li data-thumb="img/hummus.jpg"> 
+                                        <img src="img/hummus.jpg" />
+                                    </li>
+                                    <li data-thumb="img/olives.jpg"> 
+                                        <img src="img/olives.jpg" />
+                                    </li>
+                                    <li data-thumb="img/saffron.jpg"> 
+                                        <img src="img/saffron.jpg" />
+                                    </li>
+                                    <li data-thumb="img/salad.jpg"> 
+                                        <img src="img/salad.jpg" />
+                                    </li>
+                                    <li data-thumb="img/sardines.jpg"> 
+                                        <img src="img/sardines.jpg" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                 </section>
+
+                        <!-- <div class="item">
+                            <ul id="content-slider" class="content-slider">
+                                <li>
+                                    <h3>1</h3>
+                                </li>
+                                <li>
+                                    <h3>2</h3>
+                                </li>
+                                <li>
+                                    <h3>3</h3>
+                                </li>
+                                <li>
+                                    <h3>4</h3>
+                                </li>
+                                <li>
+                                    <h3>5</h3>
+                                </li>
+                                <li>
+                                    <h3>6</h3>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
                 <br><br>
 
                 <section id="menu" class="section">
@@ -115,10 +146,6 @@
         </div>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-
         <script>
             $(function(){
                 $("#nav a").click(function(e){
