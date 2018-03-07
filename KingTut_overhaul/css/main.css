@@ -75,9 +75,30 @@ body{
     background: #e5673d;
     /* background-image: url("gradient.png");  */
     background-repeat: repeat-x;
+    font-size-adjust: inherit;
 }
 /* background halp */
 
+body h1, h2{
+    font-family: 'Redressed', cursive;
+}
+
+/* FONT FAMILIES */
+/* 
+font-family: 'Redressed', cursive;
+font-family: 'Libre Franklin', sans-serif; --maybe
+font-family: 'Alegreya Sans', sans-serif; --maybe
+font-family: 'Arima Madurai', cursive; --maybe
+font-family: 'Forum', cursive; --nope
+font-family: 'Sorts Mill Goudy', serif; --nope
+font-family: 'Gentium Book Basic', serif; --nope
+font-family: 'Alice', serif;  */
+
+body p{
+    font-family: 'Forum', cursive; 
+    font-weight: 500;
+    font-size: 15pt;
+}
 
 #wrapper {
     display: block;
@@ -121,22 +142,10 @@ main {
     margin-left: 29%;
 }
 
-/* FONT FAMILIES */
-/* font-family: 'Berkshire Swash', cursive; --nope
-font-family: 'Cinzel', serif; --nope
-font-family: 'Arima Madurai', cursive; --nope
-font-family: 'Niconne', cursive; --maybe
-font-family: 'El Messiri', sans-serif; --maybe
-font-family: 'Rochester', cursive; --nope
-font-family: 'Kurale', serif; --nope
-font-family: 'Gabriela', serif; --maybe
-font-family: 'Redressed', cursive; --yes?  */
-
 #topbar li { 
     display: inline;
     font-family: 'Redressed', cursive;
     font-size: 16pt;
-    font-size-adjust: inherit;
 }
 
 #topbar a {
@@ -215,4 +224,8 @@ Modify as content requires.====== */
     (min-resolution: 1.25dppx),
     (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
+}
+
+#gallery ul{
+    list-style-type: none;
 }
