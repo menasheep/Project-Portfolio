@@ -1,5 +1,9 @@
 /* boilerplate styling */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -76,6 +80,7 @@ body{
     /* background-image: url("gradient.png");  */
     background-repeat: repeat-x;
     font-size-adjust: inherit;
+    text-align: center;
 }
 /* background halp */
 
@@ -95,6 +100,7 @@ body p{
     font-family: 'Arima Madurai', cursive;
     font-weight: 500;
     font-size: 15pt;
+    color: #1f1f1f;
 }
 
 #wrapper {
@@ -253,7 +259,7 @@ Modify as content requires.====== */
     clear: both;
 }
 
-/* The expanding image container (positioning is needed to position the close button and the text) */
+/* The expanding image container */
 .container {
     position: relative;
     display: none;
@@ -268,7 +274,7 @@ Modify as content requires.====== */
     font-size: 20px;
 }
 
-/* Closable button inside the image */
+/* Closable button inside the expanded image */
 .closebtn {
     position: absolute;
     top: 10px;

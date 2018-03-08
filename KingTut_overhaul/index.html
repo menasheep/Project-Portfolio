@@ -20,15 +20,15 @@
 
         <nav id="topbar">
             <ul class="clearfix">
-                    <li><a href="#logo">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contact">Find Us</a></li>
-                </ul>
+                <li><a href="#logo">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Find Us</a></li>
+            </ul>
         </nav>
 
-        <div id="wrapper">
+        <div id="wrapper" class="clearfix">
             <main>
                 <img src="img\logo\logo.png" id="logo">
 
@@ -43,50 +43,44 @@
 
                 <section id="gallery" class="section">
                     <h1>Gallery</h1>
-
-                    <div class="demo">
-                        <div class="item">            
-                            <div class="clearfix" style="max-width:1200px;">
-                                <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                    <li data-thumb="img/artichokes.jpg"> 
-                                        <img src="img/artichokes.jpg" />
-                                    </li>
-                                    <li data-thumb="img/eggplant.jpg"> 
-                                        <img src="img/eggplant.jpg" />
-                                    </li>
-                                    <li data-thumb="img/falafel.jpg"> 
-                                        <img src="img/falafel.jpg" />
-                                    </li>
-                                    <li data-thumb="img/hummus.jpg"> 
-                                        <img src="img/hummus.jpg" />
-                                    </li>
-                                    <li data-thumb="img/olives.jpg"> 
-                                        <img src="img/olives.jpg" />
-                                    </li>
-                                    <li data-thumb="img/saffron.jpg"> 
-                                        <img src="img/saffron.jpg" />
-                                    </li>
-                                    <li data-thumb="img/salad.jpg"> 
-                                        <img src="img/salad.jpg" />
-                                    </li>
-                                    <li data-thumb="img/sardines.jpg"> 
-                                        <img src="img/sardines.jpg" />
-                                    </li>
-                                    <li data-thumb="img/garlic.jpg"> 
-                                        <img src="img/garlic.jpg" />
-                                    </li>
-                                    <li data-thumb="img/tomatoes.jpg"> 
-                                        <img src="img/tomatoes.jpg" />
-                                    </li> 
-                                    <li data-thumb="img/kebabs.jpg"> 
-                                        <img src="img/kebabs.jpg" />
-                                    </li> 
-                                    <li data-thumb="img/baklava.jpg"> 
-                                        <img src="img/baklava.jpg" />
-                                    </li>
-                                </ul>
-                            </div>
+                    <p>Click on the images below:</p>
+                        
+                    <!-- The four columns -->
+                    <div class="row">
+                        <div class="column">
+                            <img src="img\tomatoes.jpg" alt="Tomatoes" style="width:100%" onclick="myFunction(this);">
                         </div>
+                        <div class="column">
+                            <img src="img\sardines.jpg" alt="Sardines" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\eggplant.jpg" alt="Eggplant" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\garlic.jpg" alt="Fresh Garlic" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img src="img\hummus.jpg" alt="Hummus" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\olives.jpg" alt="Olives" style="width:100%" onclick="myFunction(this);">
+                        </div> 
+                        <div class="column">
+                            <img src="img\kebabs.jpg" alt="Kebabs" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\baklava.jpg" alt="Baklava" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                            <img id="expandedImg" style="width:100%">
+                            <div id="imgtext"></div>
+                    </div>
+                        
                 </section>
                 <br><br>
 
@@ -113,7 +107,16 @@
                     $('html,body').scrollTo(this.hash,this.hash); 
                 });
             });
-        </script>        
+        </script>   
+        <script>
+            function myFunction(imgs) {
+                var expandImg = document.getElementById("expandedImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = imgs.src;
+                imgText.innerHTML = imgs.alt;
+                expandImg.parentElement.style.display = "block";
+            }
+        </script>
     </body>
 </html>
 
