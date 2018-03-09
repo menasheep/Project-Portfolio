@@ -166,6 +166,13 @@ main {
     padding: 0px 22px;
 }
 
+#coast {
+    max-width: 78%;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+
 /* Clearfix: contain floats
  *
  * For modern browsers
