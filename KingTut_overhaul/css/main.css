@@ -62,8 +62,7 @@ textarea {
     resize: vertical;
 }
 
-/* =========================================================================Browser Upgrade Prompt
-========================================================================== */
+/* /////browser upgrade prompt\\\\\ */
 
 .browserupgrade {
     margin: 0.2em 0;
@@ -87,14 +86,6 @@ body{
 body h1, h2{
     font-family: 'Redressed', cursive;
 }
-
-/* FONT FAMILIES */
-/* 
-font-family: 'Redressed', cursive;
-font-family: 'Libre Franklin', sans-serif; --maybe
-font-family: 'Alegreya Sans', sans-serif; --maybe
-font-family: 'Arima Madurai', cursive; --yes ?
-font-family: 'Forum', cursive; --maybe  */
 
 body p{
     font-family: 'Arima Madurai', cursive;
@@ -121,17 +112,15 @@ main {
 }
 
 #logo {
-    margin-left: 28.5%;
     margin-top: 50px;
 }
 
 #topbar {
     display: block;
-    margin: 0;
+    margin-bottom: 5px;
     padding: 10px 0 20px 0;
     background: #e5673d;
-    text-align: center;
-    height: 57px;
+    height: 80px;
     width: 100%;
     position: fixed; 
     z-index: 9999;     
@@ -142,11 +131,12 @@ main {
 }
 
 #topbar ul {
-    margin-left: 28%;
+    margin-left: 28.5%;
 }
 
 #topbar li { 
     display: inline;
+    text-align: center;
     font-family: 'Redressed', cursive;
     font-size: 16pt;
 }
@@ -157,7 +147,7 @@ main {
     color: #3d3e40;
     line-height: 1.25em;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 0.8;
     font-weight: bold;
 }
 
