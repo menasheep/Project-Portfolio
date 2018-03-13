@@ -27,40 +27,46 @@
                 <li><a href="#contact">Find Us</a></li>
             </ul>
         </nav>
+        
+        <div id="logo-box">
+            <img src="img\logo\logo.png" id="logo">
+        </div>
 
         <div id="wrapper" class="clearfix">
             <main>
-                <img src="img\logo\logo.png" id="logo">
-
                 <section id="about" class="section">
                     <br><br><br><br>
 
                     <h1>About Us</h1>
-                    <h2>Your New Window onto the Mediterranean</h2>
-
-                    <img id="coast" src="img\cyprus.jpg" alt="Cyprus Coast">
                     
-                    <p>Our kitchen offers a variety of alternative Mediterranean foods
-                    straight from the sun-drenched shores of coastal cities. Our Eastern Mediterranean restaurant is renowned for its modern interpretation of classic dishes and its insistence on only using high quality, fresh ingredients.
-                    Nestled north of Seattle, you're just a stone's throw from a flavorful exploration of Greece, Cyprus, and Egypt.</p>
+                    <div id="about-box">
+                        <img src="img\cyprus.jpg" alt="Cyprus Coast">
+                        
+                        <aside>
+                            <h2>Your New Window onto the Mediterranean</h2>
+                            <p>Our kitchen offers a variety of alternative Mediterranean foods
+                            straight from the sun-drenched shores of coastal cities. Our Eastern Mediterranean restaurant is renowned for its modern interpretation of classic dishes and its insistence on only using high quality, fresh ingredients.
+                            Nestled north of Seattle, you're just a stone's throw from a flavorful exploration of Greece, Cyprus, and Egypt.</p>
+                        </aside>            
+                    </div>
                 </section>
                 
                 <section id="gallery" class="section">
-                    <br><br><br>
+                    <br><br><br><br>
 
                     <h1>Gallery</h1>
-                    <p>Click on the images below:</p>
+                    <p>Explore some of the fresh ingredients we use and a few of our menu items. Click on the images below:</p>
                         
                     <!-- The four columns -->
                     <div class="row">
                         <div class="column">
-                            <img src="img\tomatoes.jpg" alt="Tomatoes" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\tomatoes.jpg" alt="Fresh Tomatoes" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
-                            <img src="img\sardines.jpg" alt="Sardines" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\sardines.jpg" alt="Wild Caught Sardines" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
-                            <img src="img\eggplant.jpg" alt="Eggplant" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\eggplant.jpg" alt="Eggplant with Tahini Sauce" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
                             <img src="img\garlic.jpg" alt="Fresh Garlic" style="width:100%" onclick="myFunction(this);">
@@ -68,16 +74,16 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img src="img\hummus.jpg" alt="Hummus" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\hummus.jpg" alt="Hummus Platter" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
-                            <img src="img\olives.jpg" alt="Olives" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\olives.jpg" alt="Greek Olives" style="width:100%" onclick="myFunction(this);">
                         </div> 
                         <div class="column">
-                            <img src="img\kebabs.jpg" alt="Kebabs" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\kebabs.jpg" alt="Chargrilled Kebabs" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
-                            <img src="img\baklava.jpg" alt="Baklava" style="width:100%" onclick="myFunction(this);">
+                            <img src="img\baklava.jpg" alt="Pistachio Baklava" style="width:100%" onclick="myFunction(this);">
                         </div>
                     </div>
                     
@@ -93,16 +99,46 @@
                     <br><br><br>
 
                     <h1>Menu</h1>
+                    <h2>Explore our menu</h2>
+                    <p>Click on the images below:</p><br>
                     
-                    
+                    <div class="row">
+                        <div class="column">
+                            <img src="img\menu1.png" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\menu2.png" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                    </div>
+                    <div class="container">
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                            <img id="expandedImg" style="width:100%">
+                            <div id="imgtext"></div>
+                    </div>
                 </section>
                 
                 <section id="contact" class="section">
                     <br><br><br>
 
                     <h1>Find Us</h1>
-                    <p> We count thirty Rebel ships, Lord Vader. But they're so small they're evading our turbo-lasers! We'll have to destroy them ship to ship. Get the crews to their fighters. Luke, let me know when you're going in. I'm on my way in now... Watch yourself! There's a lot of fire coming from the right side of that deflection tower. I'm on it. Squad leaders, we've picked up a new group of signals. Enemy fighters coming your way.</p>
+
+                    <p>
+                        <strong>We are located at:</strong><br> 
+                        4520 200th St SW<br>
+                        Lynnwood, WA 98036<br>
+                        Phone: (425) 555-5555<br><br>
+                    </p>
+                    <p>
+                        <strong>Delivery Information:</strong><br>
+                        Please allow 30-60 minutes for delivery. Delivery fee is $5 within a 3 mile range.
+                    </p>
+                    <p>    
+                        <strong>Store Hours:</strong><br>
+                        Mon - Sat:	11:00 AM - 09:00 PM<br>
+                        Sunday:	Closed
+                    </p><br><br>
                     
+                    <iframe width="550" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=king%20tut%20mediterranean&key=AIzaSyCD1EEPTvTrhqhUSpghM28x3yRyG7wHXcg" allowfullscreen></iframe>
                 </section>
             </main>
         </div>
@@ -125,6 +161,7 @@
                 expandImg.parentElement.style.display = "block";
             }
         </script>
+        <br>
     </body>
 </html>
 

@@ -1,25 +1,24 @@
-/* boilerplate styling */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    color: #222;
+    color: #202020;
     font-size: 1em;
     line-height: 1.4;
 }
 
-/* Remove text-shadow in selection highlight *
- * Customize the background color to match your design. */
+/* Removes text-shadow in selection highlight *
+ * Customized the background color to match site design. */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: rgb(255, 126, 79);
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: rgb(255, 126, 79);
     text-shadow: none;
 }
 
@@ -34,6 +33,7 @@ hr {
     padding: 0;
 }
 
+
 /* Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers */
 
@@ -46,28 +46,13 @@ video {
     vertical-align: middle;
 }
 
-/* Remove default fieldset styles. */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
 
 /* /////browser upgrade prompt\\\\\ */
 
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: #202020;
     padding: 0.2em 0;
 }
 
@@ -76,48 +61,26 @@ textarea {
 
 body{
     background: #e5673d;
-    /* background-image: url("gradient.png");  */
     background-repeat: repeat-x;
     font-size-adjust: inherit;
     text-align: center;
+    color: #202020;
 }
-/* background halp */
 
 body h1, h2{
     font-family: 'Redressed', cursive;
+    color: #292929;
 }
 
 body p{
     font-family: 'Arima Madurai', cursive;
     font-weight: 500;
     font-size: 15pt;
-    color: #1f1f1f;
-}
-
-#wrapper {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 30px;
-    border: ridge 1px orangered;
-    border-top: hidden;
-}
-
-main {
-    display: block;
-    padding-bottom: 35px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-}
-
-#logo {
-    margin-top: 50px;
 }
 
 #topbar {
     display: block;
-    margin-bottom: 5px;
+    margin-top: -88px;
     padding: 10px 0 20px 0;
     background: #e5673d;
     height: 80px;
@@ -166,10 +129,135 @@ main {
     padding: 0px 22px;
 }
 
-#coast {
-    max-width: 78%;
+#logo-box {
+    background-image: url('gradient.png');
+    background-repeat: repeat-x;
+    height: 500px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+#wrapper {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 30px;
+    border: ridge 1px orangered;
+    border-top: hidden;
+}
+
+main {
+    display: block;
+    padding-bottom: 35px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+#about-box {
+    display: inline-block;
+    height: 600px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    border: 5px black;
+}
+
+#about-box img {
+    width: 60%;
+    float: left;
+    margin-top: 30px;
+    max-width: 65%;
     opacity: 0.9;
     border-radius: 5px;
+}
+
+aside {
+    width: 34%;
+    float: right;
+    margin: 75px 10px 0px 0px;
+}
+
+/* /////gallery styling\\\\\ */
+
+#gallery {
+    background: #e5663d;
+    background: -moz-linear-gradient(top, #e5663d 0%, #f9d950 50%, #e6693d 99%, #e5663d 100%, #df6841 100%);
+    background: -webkit-linear-gradient(top, #e5663d 0%,#f9d950 50%,#e6693d 99%,#e5663d 100%,#df6841 100%);
+    background: linear-gradient(to bottom, #e5663d 0%,#f9d950 50%,#e6693d 99%,#e5663d 100%,#df6841 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5663d', endColorstr='#df6841',GradientType=0 );
+    position: inherit;
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column img {
+    opacity: 0.8; 
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clears floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: rgb(100, 100, 100);
+    font-family: 'Redressed', cursive;
+    font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: rgb(100, 100, 100);
+    font-size: 35px;
+    cursor: pointer;
+}
+/* /////end gallery styling\\\\\ */
+
+
+#menu {
+    height: auto;
+    align-content: center;
+    margin: 25px 0;
+}
+
+#menu p {
+    text-align: center;
+}
+
+
+#contact {
+    background-image: url('dblgradient.png');
+    background-repeat: repeat-x;
+    height: auto;
+    width: 100%;
 }
 
 
@@ -214,69 +302,13 @@ form .basictxt {
     line-height: 1.4em;
 }
 
-
 /* =====Media Query for Responsive Design.
 These examples override the primary ('mobile first') styles.
 Modify as content requires.====== */
 
 @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
-}
-
-/* #gallery ul{
-    list-style-type: none;
-} */
-
-
-/* gallery styling */
-/* The grid: Four equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 25%;
-    padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-    opacity: 0.8; 
-    cursor: pointer; 
-}
-
-.column img:hover {
-    opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* The expanding image container */
-.container {
-    position: relative;
-    display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: white;
-    font-size: 35px;
-    cursor: pointer;
 }
