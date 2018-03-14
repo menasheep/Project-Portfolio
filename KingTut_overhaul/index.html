@@ -30,7 +30,7 @@
             </ul>
         </nav>
         
-        <div id="logo-box">
+        <div id="logo-box" class="drop-shadow">
             <img src="img\logo\logo.png" id="logo">
         </div>
 
@@ -101,20 +101,23 @@
                 </section>
 
                 <section id="menu" class="section">
-                    <br><br><br>
+                    <br><br>
 
                     <h1>Menu</h1>
-                    <img src="img\divider.png" alt="divider" style="width:500px;height:50px;">
-
-                    <h2>Explore our menu</h2>
-                    <p>Click on the images below:</p><br>
+                    <img src="img\divider.png" alt="divider" style="width:500px;height:50px;"><br>
                     
                     <div class="row">
+                        <div class="column">
+                            <img src="img\dummy.png" style="width:100%">
+                        </div>
                         <div class="column">
                             <img src="img\menu1.png" style="width:100%" onclick="myFunction(this);">
                         </div>
                         <div class="column">
                             <img src="img\menu2.png" style="width:100%" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="img\dummy.png" style="width:100%">
                         </div>
                     </div>
                     <div class="container">
@@ -160,6 +163,14 @@
                 });
             });
         </script>   
+        <script> //scrolling color transition for nav bar
+            $(function () {
+                $(document).scroll(function () {
+                var $nav = $("#topbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+            });
+        </script>
         <script>
             function myFunction(imgs) {
                 var expandImg = document.getElementById("expandedImg");

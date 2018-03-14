@@ -142,13 +142,55 @@ body p{
     padding: 0px 22px;
 }
 
-/* Created a gradient to complement the logo */
+/* Changes the nav bar color as you scroll */
+#topbar.scrolled {
+    background-color: rgb(248, 175, 66) !important;
+    transition: background-color 2000ms linear;
+}
+
+/* Created a gradient and drop shadow to complement the logo */
 #logo-box {
     background-image: url('gradient.png');
     background-repeat: repeat-x;
+    position: relative;
     height: 500px;
     width: 100%;
     margin-top: 80px;
+
+}
+
+.drop-shadow {
+    position: relative;
+}
+
+.drop-shadow::before, .drop-shadow::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #000000;
+    -webkit-box-shadow: 0 15px 10px #272727;
+    -moz-box-shadow: 0 15px 10px #272727;
+    box-shadow: 0 15px 10px #272727;
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+}
+
+.drop-shadow::after {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    right: 10px;
+    left: auto;
 }
 
 #wrapper {
@@ -157,7 +199,7 @@ body p{
     margin: 0 auto;
     padding-top: 30px;
     border: inset 1px orangered;
-    border-top: hidden;
+    border-top: 5px;
 }
 
 #pyramids {
@@ -177,7 +219,6 @@ main {
     height: 600px;
     margin-bottom: 20px;
     padding: 0 30px;
-    border: 5px black;
 }
 
 #about-box img {
@@ -268,7 +309,7 @@ aside {
 #menu {
     height: auto;
     align-content: center;
-    margin: 30px 0;
+    margin: 40px 0;
     padding-top: 50px;
 }
 
