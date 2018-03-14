@@ -1,4 +1,28 @@
 
+/* /////Media Query for Responsive Design. \\\\\
+These examples override the primary ('mobile first') styles.
+Modify as content requires. */
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ///// Browser upgrade prompt \\\\\ */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #202020;
+    padding: 0.2em 0;
+}
+
+
+/* ///// Boilerplate \\\\\ */
+
 * {
     box-sizing: border-box;
 }
@@ -7,19 +31,6 @@ html {
     color: #202020;
     font-size: 1em;
     line-height: 1.4;
-}
-
-/* Removes text-shadow in selection highlight *
- * Customized the background color to match site design. */
-
-::-moz-selection {
-    background: rgb(255, 126, 79);
-    text-shadow: none;
-}
-
-::selection {
-    background: rgb(255, 126, 79);
-    text-shadow: none;
 }
 
 /* A better looking default horizontal rule */
@@ -33,8 +44,7 @@ hr {
     padding: 0;
 }
 
-
-/* Remove the gap between audio, canvas, iframes,
+/* Removed the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers */
 
 audio,
@@ -46,22 +56,24 @@ video {
     vertical-align: middle;
 }
 
+/* Removed text-shadow in selection highlight *
+ * Customized the background color to match site design. */
 
-/* /////browser upgrade prompt\\\\\ */
+::-moz-selection {
+    background: rgb(255, 126, 79);
+    text-shadow: none;
+}
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #202020;
-    padding: 0.2em 0;
+::selection {
+    background: rgb(255, 126, 79);
+    text-shadow: none;
 }
 
 
-/* /////page structure & styling\\\\\ */
+/* ///// Page structure & styling \\\\\ */
 
 body{
     background: #e5673d;
-    background-repeat: repeat-x;
     font-size-adjust: inherit;
     text-align: center;
     color: #202020;
@@ -78,6 +90,7 @@ body p{
     font-size: 15pt;
 }
 
+/* Sticky nav bar follows the user down the page */
 #topbar {
     display: block;
     margin-top: -88px;
@@ -129,6 +142,7 @@ body p{
     padding: 0px 22px;
 }
 
+/* Created a gradient to complement the logo */
 #logo-box {
     background-image: url('gradient.png');
     background-repeat: repeat-x;
@@ -181,7 +195,8 @@ aside {
     margin: 75px 10px 0px 0px;
 }
 
-/* /////gallery styling\\\\\ */
+
+/* ///// Gallery styling \\\\\ */
 
 #gallery {
     background: #e5663d;
@@ -199,7 +214,7 @@ aside {
     margin-top: 40px;
 }
 
-/* The grid: Four equal columns that floats next to each other */
+/* Gallery grid: Four equal columns that floats next to each other */
 .column {
     float: left;
     width: 25%;
@@ -247,7 +262,7 @@ aside {
     font-size: 35px;
     cursor: pointer;
 }
-/* /////end gallery styling\\\\\ */
+/* ///// end gallery styling \\\\\ */
 
 
 #menu {
@@ -270,16 +285,7 @@ aside {
 }
 
 
-/* Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+/* Clearfix: contains floats */
 
 .clearfix:before,
 .clearfix:after {
@@ -311,13 +317,3 @@ form .basictxt {
     line-height: 1.4em;
 }
 
-/* =====Media Query for Responsive Design.
-These examples override the primary ('mobile first') styles.
-Modify as content requires.====== */
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
