@@ -1,6 +1,8 @@
 WEBSITE REDESIGN CASE STUDY:
 KING TUT MEDITERRANEAN RESTAURANT
 
+https://www.malinamorning.com/portfolio/website-redesign-case-study
+
 
 PAGE STRUCTURE & AESTHETICS
 The original webpage displays an array of links for navigating through the site and for social media, each nav link taking the user to a separate page.  The landing page also has two rotating images of dishes that they offer, which also currently serves as their image gallery as their actual Gallery page is empty. The general design feels cramped, outdated, and appears clunky, especially due to the use of multiple and seemingly disjointed fonts.
