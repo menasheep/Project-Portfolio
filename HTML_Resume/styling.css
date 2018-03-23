@@ -10,17 +10,26 @@
     display: table;
 }
 
-
-main {
-    width: 80%;
-    margin: 0 auto;
+#wrapper {
+    width: 75%;
     padding: 10px;
     background-color: aquamarine;
+    margin: 0 auto;
     text-align: left;
+    /* border: thick teal; */
+    border-radius: 5px;
+}
+
+main {
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 #photo {
     width: 650px;
+    margin-top: 2px;
     background-position: top left;
     float: left;
 }
@@ -30,20 +39,27 @@ nav {
     display: block;
     float: right;
     clear: right;
-    height: 100%;
+    height: auto;
     width: 30%;
-    margin-right: 10px;
+    margin: -15px 0px;
+    overflow: auto;
 }
 
 nav ul {
+    height: 100%;
     list-style-type: none;
     text-align: center;
+    border-radius: 5px;
+}
+
+nav a {
+    font-size: 14pt;
 }
 
 a:link, a:visited {
     background-color: #f44336;
     color: white;
-    padding: 18px 25px;
+    padding: 17px 25px;
     text-align: center; 
     text-decoration: none;
     display: block;
@@ -53,7 +69,12 @@ a:hover, a:active {
     background-color: red;
 }
 
-#about {
+article {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+h1 {
     margin: 10px 0;
 }
 
@@ -68,6 +89,49 @@ font-family: 'Berkshire Swash', cursive;
 font-family: 'Oswald', sans-serif;
 font-family: 'Lato', sans-serif; */
 
-h1, p {
+h1, h2, p {
     clear: both;
+    text-align: left;
+}
+
+#contact-form {
+    display: inline-block;
+    width: 50%;
+}
+
+
+#contact-form input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+#contact-form input:focus {
+    border: 3px solid fuchsia;
+}
+
+#contact-form textarea {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    resize: none;
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+#contact-form textarea:focus {
+    border: 3px solid fuchsia;
+}
+
+#contact-form button {
+    align-self: center;
 }

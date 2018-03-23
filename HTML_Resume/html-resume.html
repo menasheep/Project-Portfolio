@@ -14,26 +14,26 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <main class="clearfix">
-            
-            <picture>
-                <source media="(min-width: 650px)" srcset="img\2.18.png">
-                <source media="(min-width: 465px)" srcset="img\2.18_sm.png">
-                <img src="img\2.18.png" alt="Malina" id="photo" style="width:auto;">
-            </picture>
-            <img src="img\2.18.jpg" id="photo">
-            <nav>
-                <ul class="clearfix">
-                    <li><a href="#Malina">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#resume">My Resume.pdf</a></li>
-                </ul>
-            </nav>
+        <div id="wrapper">
+
+            <main class="clearfix">
+                <picture>
+                    <source media="(min-width: 465px)" srcset="img\2.18_sm.png">
+                    <img src="img\2.18.png" alt="Malina" id="photo">
+                </picture>
+                <nav>
+                    <ul class="clearfix">
+                        <li><a href="#Malina">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#resume">My Resume.pdf</a></li>
+                    </ul>
+                </nav>
+            </main>
             <article id="about">
                 <h1>About Me</h1>
                 <p>
@@ -43,7 +43,104 @@
                     Originally from the South, Mal found her true home in the Pacific Northwest. Her interests are many; and include travel, biology, astronomy, nutrition, gourmet cooking, cars, music, sci-fi, and gaming.
                 </p>
             </article>
-        </main>
+            <article id="skills">
+                <h1>Skills</h1>
+                <p>
+                    LANGUAGES:  HTML, CSS, Python, JavaScript, C#, SQL<br>
+                    FRAMEWORKS:  Django, Express.js, Entity, ASP.Net Core/MVC, Bootstrap<br>
+                    DATABASES:  MySQL Workbench, MongoDB, ERD Building<br>
+                    Others:  MAMP, GitHub, Node.js, npm, Pip, AWS (EC2), Razor, LINQ, JSON, jQuery</p>
+            </article>
+            <article id="experience">
+                <h1>Experience</h1>
+                <h2>Technical</h2>
+                <p>
+                    Front-End Web Developer, Coding Dojo Developer Bootcamp, Bellevue, WA — 2017
+                    Completed an immersive, full-stack web development program with a focus on client-side development. It consisted of more than 800 hours spent learning and the application of HTML/CSS, Python/Django, MEAN, and C#/ASP.Net MVC.
+                    
+                    
+                    Projects:
+                    Website Redesign Experiment (front-end) — A redesigned version of a local 
+                    restaurant’s website including a complementary case study
+                    
+                    Hand-crafted a new design for a Mediterranean restaurant. Features include single-page scrolling, sticky navigation bar, tabbed image gallery, multiple 
+                    Google API utilization, and thematic styling throughout. Case study provides a breakdown for each design decision.
+                    Developed using JavaScript, jQuery, Bootstrap, HTML, and CSS.
+                    
+                    
+                    
+                    The Wall (C#) — A social networking application, similar to Facebook, featuring a login/registration page and message posting
+                    
+                    Structured the database tables and joins, implemented sessions, validations, data mapping, and class structures between forms and database. Created a simple, singular webpage interface for message content to display.
+                    Developed using C#, ASP.Net MVC, Entity, MySQL, HTML, and CSS. 
+                </p>
+                <h2>Less Technical</h2>
+                <p>
+                    Patient Coordinator, Psychiatry Northwest, Seattle, WA — 2016 - 2017
+                    Served as clinic’s main point of patient contact, managed high call volumes, handled scheduling and calendar management for multiple providers, collected payments, and provided outstanding customer service, resulting in a 300% increase in client base after joining the team.
+                    Streamlined processes and collaborated with team members to optimize clinic operations and various projects. Assisted with billing, transcription, and frequently adjusted priorities throughout the day as needed.
+                    
+                    Client Experience Specialist, Custom Decorators, Inc., Tigard, OR — 2015 - 2016
+                    Operated with high levels of multitasking, frequently changing priorities, and the ability to remain calm during stressful, escalated customer issues. 
+                    Managed full-cycle billing, consistently met deadlines, and streamlined billing and order entry processes.
+                    
+                    Leave Assistant, Matrix Absence Management, Portland, OR — 2010 - 2012
+                    Aided in administration of medical and state law leaves of absence for three client companies, managed deadlines, and assisted in claims examiner workloads with strong attention to detail.
+                    Implemented an office recycling program to reduce office waste, lead the team of assistants in developing more streamlined workflows, and organized the branch’s electronic filing system.
+                    
+                    Medical Claims Billing Specialist, Home I.V. Specialists, Jonesboro, AR  — 2008 – 2010
+                    Created and managed medical claims and collected from insurance companies with focus on accuracy, timeliness, and error resolution.
+                    Organized and maintained billing database software, pricing matrices, and electronic medical records.
+                </p>
+            </article>
+            <article id="education">
+                <h1>Education</h1>
+                <p>
+                    Coding Dojo Developer Bootcamp, Seattle, WA — 2017
+                    Full-stack Web Development {Web Fund., Python/Django, MEAN, C#/ASP.NET Core}
+                    
+                    North Portland Yoga, Portland, Oregon — 2014
+                    200-Hour Vinyasa Teacher Training Certification
+                    
+                    Portland Community College, Portland, OR — 2013 - 2014
+                    Wildlife Science: Marine Biology — Completed 59 credits, 4.0 GPA
+
+                    Arkansas State University, Jonesboro, AR — 2002 - 2003
+                    Business: Corporate Finance — Completed 50 credits
+                </p>
+                <h2>Awards and Certification</h2>
+                <p>
+                    Phi Theta Kappa National Honors Society
+                    200-Hour Vinyasa Yoga Teacher Training
+                </p>
+            </article>
+            <article id="portfolio">
+                <h1>Portfolio</h1>
+                <a href="https://www.malinamorning.com/portfolio/">My Portfolio Website</a>
+            </article>
+            <article id="contact">
+                <h1>Contact Me</h1>
+
+                <form id="contact-form" action="mailto:morning.malina@gmail.com" method="post" enctype="text/plain" target="_self">
+                    <fieldset>
+                        <legend>Reach Out</legend>
+                        Name:<br>
+                        <input type="text" name="name" id="form-name" autofocus><br>
+                        E-mail:<br>
+                        <input type="email" name="email"><br>
+                        Message:<br>
+                        <textarea name="message" rows="10" cols="71">Send me an email</textarea><br><br>
+                        <button type="submit" onclick="alert('Lovely! Thank you for the email! I will get back to you as soon as I can.')">Send</button>
+                        <button type="reset">Reset</button>
+                        <!-- <input type="reset" value="Reset"> -->
+                    </fieldset>
+                </form>
+            </article>
+            <article id="resume">
+                <h1>My Resume</h1>
+                <a href="https://docs.google.com/document/d/1Gzm9O2OGHb6dU1TeNBIC-ClsOOhjeSIvXEYeLQ6OtWA/edit?usp=sharing">Downloadable Resume</a>
+            </article>
+        </div>
     </body>
     <script> //scrolling functionality
         $(function(){
