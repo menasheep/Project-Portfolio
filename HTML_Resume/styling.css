@@ -1,0 +1,73 @@
+/* Clearfix: contains floats */
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: aquamarine;
+    text-align: left;
+}
+
+#photo {
+    width: 650px;
+    background-position: top left;
+    float: left;
+}
+
+
+nav {
+    display: block;
+    float: right;
+    clear: right;
+    height: 100%;
+    width: 30%;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 18px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+#about {
+    margin: 10px 0;
+}
+
+/* FONT FAMILIES:
+font-family: 'Cookie', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Niconne', cursive;
+font-family: 'Norican', cursive;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Sail', cursive;
+font-family: 'Berkshire Swash', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Lato', sans-serif; */
+
+h1, p {
+    clear: both;
+}

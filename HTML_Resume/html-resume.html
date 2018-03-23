@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Malina Morning</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="styling.css" />
+        <!-- Google Font API call -->
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Cookie|Lato|Lobster|Niconne|Norican|Oleo+Script+Swash+Caps|Oswald|Sail" rel="stylesheet">
+        <script src="main.js"></script>
+        <!-- jQuery CDN call -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <main class="clearfix">
+            
+            <picture>
+                <source media="(min-width: 650px)" srcset="img\2.18.png">
+                <source media="(min-width: 465px)" srcset="img\2.18_sm.png">
+                <img src="img\2.18.png" alt="Malina" id="photo" style="width:auto;">
+            </picture>
+            <img src="img\2.18.jpg" id="photo">
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="#Malina">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#resume">My Resume.pdf</a></li>
+                </ul>
+            </nav>
+            <article id="about">
+                <h1>About Me</h1>
+                <p>
+                    Malina "Mal" Morning is a web developer based in the Greater Seattle area.  She enjoys collaborating with teammates to find creative solutions to complex problems. Whether part of a group or flying solo, she loves taking on new challenges. A natural problem solver, Mal's resourcefulness has become invaluable in her work. To the benefit of her projects, she keeps the bigger picture in mind when focusing on details.<br><br>
+                    
+                    Always motivated by a healthy curiosity, Mal enjoys learning about various facets of visual design, UX and UI, graphic animation and technical artistry. The creation of meaningful experiences using outside-the-box creativity is what drives her passion for tech.<br><br>                    
+                    Originally from the South, Mal found her true home in the Pacific Northwest. Her interests are many; and include travel, biology, astronomy, nutrition, gourmet cooking, cars, music, sci-fi, and gaming.
+                </p>
+            </article>
+        </main>
+    </body>
+    <script> //scrolling functionality
+        $(function(){
+            $("#nav a").click(function(e){
+                e.preventDefault();
+                $('html,body').scrollTo(this.hash,this.hash); 
+            });
+        });
+    </script>  
+</html>
