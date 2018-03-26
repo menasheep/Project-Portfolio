@@ -103,21 +103,21 @@ h1, h2, h3 {
     font-family: 'Berkshire Swash', cursive;
 }
 
-h4, a, p, #contact-form, textarea {
+h4, a, p, #contact-form, textarea, #experience li {
     font-family: 'Lato', sans-serif;
 }
 
+#experience li {
+    margin: 5px;
+}
 
 /* skills */
 .column {
     float: left;
     width: 25%;
-    height: 325px;  
+    height: 340px;  
 }
 
-/* .column h4 {
-    font-weight: 700;
-} */
 
 /* Responsive layout - when the screen is less than 600px wide, make the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
