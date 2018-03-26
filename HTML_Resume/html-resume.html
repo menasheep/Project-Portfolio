@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Malina Morning</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
+        <!-- Styling -->
         <link rel="stylesheet" type="text/css" media="screen" href="styling.css" />
+
+        <!-- scripting / jQuery CDN call -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+
         <!-- Google Font API call -->
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Lato|Oswald" rel="stylesheet">
-        <script src="main.js"></script>
-        <!-- jQuery CDN call -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <nav>
             <ul class="clearfix">
                 <li><a href="#Malina">Malina Morning</a></li>
-                <li><a href="#Malina">Home</a></li>
+                <li><a href="html-resume.html">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -189,6 +192,7 @@
             </article>
         </div>
     </body>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script> //scrolling functionality
         $(function(){
             $("#nav a").click(function(e){
