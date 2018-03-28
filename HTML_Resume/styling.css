@@ -84,6 +84,7 @@ nav a:link, a:visited {
     color: #ffffff;
 }
 
+/* nav coloring */
 .name {
     background-color: rgba(0, 137, 138, 1);
 }
@@ -148,11 +149,14 @@ nav a:link, a:visited {
     background-color: rgba(5, 156, 157, 0.65);
 }
 
-
-
 article {
     margin: 10px 0;
     padding: 50px;
+}
+
+h1, h2, h3, h4, p {
+    clear: both;
+    text-align: left;
 }
 
 p {
@@ -164,12 +168,11 @@ h2 {
 }
 
 h3 {
-    font-size: 24pt;
+    font-size: 20pt;
 }
 
-h1, h2, h3, h4, p {
-    clear: both;
-    text-align: left;
+h4 {
+    font-size: 14pt;
 }
 
 h1, h2 {
@@ -190,7 +193,7 @@ textarea,
     margin: 5px;
 }
 
-/* skills */
+/* skills section */
 .column {
     float: left;
     width: 25%;
@@ -211,12 +214,26 @@ textarea,
     clear: both;
 }
 
+#portfolio a:link, #portfolio a:visited, 
+#resume a:link, #resume a:visited {
+    background-color: rgb(0, 137, 138);
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+#portfolio a:hover, #portfolio a:active, 
+#resume a:hover, #resume a:active {
+    background-color: rgba(5, 156, 157, 1);
+}
+
 #contact-form {
     float: left;
-    display: inline-block;
     width: 50%;
-    margin-top: 4px;
-    margin-left: 4px;
+    margin: 25px 0px 0px 4px;
 }
 
 fieldset {
@@ -229,7 +246,7 @@ fieldset {
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid rgb(0, 137, 138);
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: rgba(0, 137, 138, 0.8);
     color: #ffffffda;
     font-size: 12pt;
@@ -241,14 +258,13 @@ fieldset {
 }
 
 #contact-form textarea {
-    background-color: whitesmoke;
     width: 100%;
     padding: 10px 20px;
-    margin-top: 8px;
+    margin: 8px 0px;
     box-sizing: border-box;
     resize: none;
     border: 2px solid rgb(0, 137, 138);
-    border-radius: 4px;
+    border-radius: 3px;
     background-color: rgba(0, 137, 138, 0.8);
     color: #ffffffda;
     font-size: 12pt;
@@ -258,7 +274,7 @@ fieldset {
     display: inline-block;
     background-color: teal;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     color: #ffffffda;
     font-size: 11pt;
     padding: 10px 32px;
@@ -271,12 +287,12 @@ fieldset {
     width: 45%;
     float: right;
     clear: right;
-    margin-right: 20px;
-    border-radius: 5px;
+    margin: 0px 20px 200px 0px;
+    border-radius: 3px;
 }
 
 #resume {
-    height: 150px;
+    height: 175px;
     clear: both;
-    padding-top: 50px;
+    padding: 50px 0px 0px 0px;
 }
