@@ -10,8 +10,17 @@
     display: table;
 }
 
+html {
+    background: url(img/bg_mal.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 body {
-    margin-top: -8px;
+    margin: 0px;
 }
 
 #wrapper {
@@ -19,91 +28,160 @@ body {
     width: 67%;
     height: 100%;
     float: left;
-    background-color: aquamarine;
-    margin: 13px 0 3px 15px;
+    margin: 0px;
     text-align: left;
 }
 
 main {
-    display: inline-block;
     width: 100%;
-    background-color: white;
+    height: auto;
 }
 
-#photo {
-    width: 650px;
-    margin-top: 2px;
-    background-position: top left;
-    float: left;
-}
-
-
-/* color palette for menu:
-#003434
-#004d4d
-#006767
-#008080
-#009a9a
-#00b3b3
-#00cdcd
-*/
 
 nav {
     display: block;
-    height: 101%;
+    height: 100%;
     width: 33%;
     position: fixed; 
     right: 0;
-    margin: -4px 0 -3px 0;
+    border: 0px;
+    margin: 0px;
     overflow: hidden;
     clear: both;
 }
 
 nav ul {
     height: 100%;
+    margin: 0px;
+    border:0px;
+    padding: 0px;
     list-style-type: none;
-    text-align: center;
+    text-align: left;
 }
 
-nav a {
+nav ul li {
+    height: 10%;
+    overflow: hidden;
     font-size: 14pt;
 }
 
-a:link, a:visited {
-    background-color: #f44336;
-    color: white;
-    padding: 25px 25px 25px 25px;
-    text-align: center; 
-    text-decoration: none;
+
+nav a:link, a:visited {
     display: block;
+    padding: 6%;
+    text-align: left; 
+    text-decoration: none;
+    color: #ffffff;
 }
 
-a:hover, a:active {
-    background-color: red;
+.name {
+    background-color: rgba(0, 137, 138, 1);
+}
+
+.name:hover, .name:active {
+    background-color: rgba(5, 156, 157, 1);
+}
+
+.home {
+    background-color: rgba(0, 137, 138, 0.95);
+}
+
+.home:hover, .home:active {
+    background-color: rgba(5, 156, 157, 0.95);
+}
+
+.skills {
+    background-color: rgba(0, 137, 138, 0.9);
+}
+
+.skills:hover, .about:active {
+    background-color: rgba(5, 156, 157, 0.9);
+}
+
+.exp {
+    background-color: rgba(0, 137, 138, 0.85);
+}
+
+.exp:hover, .skills:active {
+    background-color: rgba(5, 156, 157, 0.85);
+}
+
+.edu {
+    background-color: rgba(0, 137, 138, 0.8);
+}
+
+.edu:hover, .exp:active {
+    background-color: rgba(5, 156, 157, 0.8);
+}
+
+.portfolio {
+    background-color: rgba(0, 137, 138, 0.75);
+}
+
+.portfolio:hover, .edu:active {
+    background-color: rgba(5, 156, 157, 0.75);
+}
+
+.about {
+    background-color: rgba(0, 137, 138, 0.7);
+}
+
+.about:hover, .portfolio:active {
+    background-color: rgba(5, 156, 157, 0.7);
+}
+
+.contact {
+    background-color: rgba(0, 137, 138, 0.65);
+}
+
+.contact:hover, .contact:active {
+    background-color: rgba(5, 156, 157, 0.65);
+}
+
+.resume {
+    background-color: rgba(0, 137, 138, 0.6);
+}
+
+.resume:hover, .resume:active {
+    background-color: rgba(5, 156, 157, 0.6);
+}
+
+.social {
+    background-color: rgba(0, 137, 138, 0.55);
+}
+
+.social:hover, .social:active {
+    background-color: rgba(5, 156, 157, 0.55);
 }
 
 article {
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 50px;
 }
 
-/* FONT FAMILIES:
-font-family: 'Berkshire Swash', cursive;
-font-family: 'Lato', sans-serif;
-font-family: 'Oswald', sans-serif; */
+p {
+    line-height: 18pt;
+}
+
+h2 {
+    font-size: 36pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
 
 h1, h2, h3, h4, p {
     clear: both;
     text-align: left;
-    padding: 15px;
 }
 
-h1, h2, h3 {
+h1, h2 {
     margin: 10px 0;
     font-family: 'Berkshire Swash', cursive;
 }
 
-h4, a, p, #contact-form, textarea, #experience li {
+h3, h4, a, p, #contact-form, textarea, #experience li {
     font-family: 'Lato', sans-serif;
 }
 
@@ -115,7 +193,7 @@ h4, a, p, #contact-form, textarea, #experience li {
 .column {
     float: left;
     width: 25%;
-    height: 340px;  
+    height: 335px;  
 }
 
 
@@ -150,7 +228,7 @@ fieldset {
     padding: 10px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 2px solid teal;
+    border: 2px solid rgb(0, 137, 138);
     border-radius: 4px;
     background-color: black;
     color: whitesmoke;
@@ -158,7 +236,7 @@ fieldset {
 
 #contact-form input:focus, 
 #contact-form textarea:focus {
-    border: 3px solid #f44336;
+    border: 3px solid rgb(0, 137, 138);
 }
 
 #contact-form textarea {
