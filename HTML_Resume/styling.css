@@ -77,9 +77,10 @@ nav ul li {
 
 
 nav a:link, a:visited {
-    display: block;
+    display: inline-block;
     padding: 6%;
-    text-align: left; 
+    text-align: left;
+    vertical-align: middle;
     text-decoration: none;
     color: #ffffff;
 }
@@ -148,6 +149,38 @@ nav a:link, a:visited {
 .resume:hover, .resume:active {
     background-color: rgba(5, 156, 157, 0.65);
 }
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    padding: 0px 15px 0px 0px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
 
 article {
     margin: 10px 0;
