@@ -18,7 +18,6 @@ html {
     background-size: cover;
 }
 
-
 body {
     margin: 0 auto;
 }
@@ -82,8 +81,8 @@ nav a:link, a:visited {
     vertical-align: middle;
     text-decoration: none;
     color: #ffffff;
-    -webkit-transition: margin-left 1s; /* For Safari 3.1 to 6.0 */
-    transition: margin-left 1s;
+    -webkit-transition: margin-left 0.5s; /* For Safari 3.1 to 6.0 */
+    transition: margin-left 0.5s;
 }
 
 nav a:hover {
