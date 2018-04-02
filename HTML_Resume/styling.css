@@ -38,12 +38,14 @@ main {
 }
 
 #logo {
-    width: 506px;
+    display: block;
+    width: 50%;
+    min-width: 250px;
     height: 296px;
-    background-image: url(img/logo.png);
+    background: url(img/logo.png) no-repeat;
     background-size: contain;
     top: 0;
-    margin: 0px 0px 350px 50px;
+    margin: 0px 200px 350px 50px;
 }
 
 nav {
@@ -78,6 +80,7 @@ nav a:link, a:visited {
     display: inline-block;
     padding: 6%;
     width: 100%;
+    margin: 5px 0px 0px 0px;
     text-align: left;
     vertical-align: middle;
     text-decoration: none;
