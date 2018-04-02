@@ -47,7 +47,6 @@ main {
     margin: 0px 0px 350px 50px;
 }
 
-
 nav {
     display: block;
     height: 100%;
@@ -67,14 +66,14 @@ nav ul {
     padding: 0px;
     list-style-type: none;
     text-align: left;
+    overflow: hidden;
 }
 
 nav ul li {
     height: 12.5%;
     overflow: hidden;
     font-size: 14pt;
-}
-
+}   
 
 nav a:link, a:visited {
     display: inline-block;
@@ -83,6 +82,12 @@ nav a:link, a:visited {
     vertical-align: middle;
     text-decoration: none;
     color: #ffffff;
+    -webkit-transition: margin-left 1s; /* For Safari 3.1 to 6.0 */
+    transition: margin-left 1s;
+}
+
+nav a:hover {
+    margin-left: 15px;
 }
 
 /* nav coloring */
